@@ -1,0 +1,41 @@
+public class maindemo{
+    public static void main(String[] args) {
+        Addition obj = new Addition();
+        YCCE college = new YCCE();
+        CTechDept dept = new CTechDept();
+
+        obj.addNumbers();
+        System.out.println("-------------------");
+        college.showCollege();
+        System.out.println("-------------------");
+        dept.showDept();
+    }
+}
+class Addition {
+    int a = 10;
+    int b = 20;
+
+    void addNumbers() {
+        int sum = a + b;
+        System.out.println("Sum of two numbers: " + sum);
+    }
+}
+class YCCE {
+    String collegeName = "Yeshwantrao Chavan College of Engineering";
+    String location = "Nagpur";
+
+    void showCollege() {
+        System.out.println("College Name: " + collegeName);
+        System.out.println("Location: " + location);
+    }
+}
+class CTechDept {
+    String deptName = "Computer Technology Department";
+    int totalStudents = 120;
+
+    void showDept() {
+        System.out.println("Department: " + deptName);
+        System.out.println("Total Students: " + totalStudents);
+    }
+}
+
