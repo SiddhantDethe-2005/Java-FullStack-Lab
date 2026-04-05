@@ -1,0 +1,66 @@
+# PS 1:
+class AreaCalculator {
+
+    int area(int side) {
+        return side * side;
+    }
+
+    int area(int length, int breadth) {
+        return length * breadth;
+    }
+
+    double area(double radius) {
+        return Math.PI * radius * radius;
+    }
+
+    public static void main(String[] args) {
+        AreaCalculator obj = new AreaCalculator();
+
+        int squareArea = obj.area(5);
+        int rectangleArea = obj.area(4, 6);
+        double circleArea = obj.area(3.5);
+
+        System.out.println("Area of Square: " + squareArea);
+        System.out.println("Area of Rectangle: " + rectangleArea);
+        System.out.println("Area of Circle: " + circleArea);
+    }
+}
+
+# PS 2:
+class Shape {
+    void draw() {
+        System.out.println("Drawing a Generic Shape");
+    }
+}
+class Circle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+class Rectangle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing Rectangle");
+    }
+}
+class Triangle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing Triangle");
+    }
+}
+public class ShapeSize{
+    public static void main(String[] args) {
+        Shape myShape;
+
+        myShape = new Circle();
+        myShape.draw();
+
+        myShape = new Rectangle();
+        myShape.draw();
+
+        myShape = new Triangle();
+        myShape.draw();
+    }
+}
