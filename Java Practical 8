@@ -1,0 +1,22 @@
+import java.io.*;
+public class FileDemo {
+    public static void main(String[] args) {
+        try {
+            FileWriter fw = new FileWriter("Siddhant.txt");
+            fw.write("Welcome to Java File Handling." + System.lineSeparator());
+            fw.write("My name is Siddhant Dethe." + System.lineSeparator());
+
+
+            fw.close();
+            FileReader fr = new FileReader("Siddhant.txt");
+            int i;
+            while ((i = fr.read()) != -1) {
+                System.out.print((char) i);
+            }
+            fr.close();
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
